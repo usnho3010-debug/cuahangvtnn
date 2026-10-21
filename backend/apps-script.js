@@ -77,6 +77,14 @@ function updateSettings(input){
       clean[k]=k==='ordersEnabled'?data[k]===true:safeText(data[k],6000);
     }
   });
+  if(clean.ordersEnabled===true){
+    const mustHave=['siteName','hotline','address','shippingPolicy','returnPolicy','privacyPolicy','terms'];
+    const missing=mustHave.filter(key=>!String(clean[key]||'').trim());
+    if(missing.length)throw Error('Chưa đủ thông tin để bật nhận đơn: '+missing.join(', '));
+    if(!products().some(p=>p.active&&p.verified))throw Error('Cần ít nhất một sản phẩm hợp lệ đang hiển thị');
+    const props=PropertiesService.getScriptProperties();
+    if(!props.getProperty('TELEGRAM_BOT_TOKEN')||!props.getProperty('TELEGRAM_CHAT_ID'))throw Error('Chưa kết nối bot Telegram để nhận đơn');
+  }
   const sh=table('Settings');const output=SETTINGS_FIELDS.filter(k=>Object.prototype.hasOwnProperty.call(clean,k)).map(k=>[k,JSON.stringify(clean[k])]);
   if(sh.getLastRow()>1)sh.getRange(2,1,sh.getLastRow()-1,2).clearContent();
   if(output.length)sh.getRange(2,1,output.length,2).setValues(output);
