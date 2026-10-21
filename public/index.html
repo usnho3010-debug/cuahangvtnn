@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#174d39"><meta name="description" content="Sản phẩm vật tư nông nghiệp, thuốc BVTV và giải pháp chăm sóc mùa vụ.">
+<title>Vật tư nông nghiệp · Gian hàng trực tuyến</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head><body>
+<div id="announce" class="announce" hidden></div>
+<header class="topbar"><div class="shell header-inner">
+  <a href="/" class="brand" aria-label="Trang chủ"><span class="brand-icon">✳</span><span><strong id="brandName">VẬT TƯ NÔNG NGHIỆP</strong><small id="brandTag">Đồng hành cùng nhà nông</small></span></a>
+  <nav class="nav-desktop"><a href="#catalog">Sản phẩm</a><a href="#about">Về chúng tôi</a><a href="#contact">Liên hệ</a></nav>
+  <div class="header-actions"><a id="phoneTop" href="#contact" class="call-link">☎ <span>Tư vấn</span></a>
+  <button type="button" id="cartOpen" class="cart-btn" aria-label="Mở giỏ hàng">🛒 <span>Giỏ hàng</span> <b id="cartCount">0</b></button></div>
+</div></header>
+<main>
+<section class="hero"><div class="shell hero-grid"><div class="hero-content">
+  <span class="eyebrow">✦ GIAN HÀNG DÀNH CHO NHÀ NÔNG</span>
+  <h1 id="heroTitle">Chăm cây khỏe mạnh.<br><em>Mùa vụ bội thu.</em></h1>
+  <p id="heroText">Tìm sản phẩm vật tư nông nghiệp phù hợp, xem thông tin rõ ràng và đặt hàng nhanh trên điện thoại.</p>
+  <div class="hero-actions"><a href="#catalog" class="btn btn-primary">Khám phá sản phẩm <span>→</span></a><a id="heroCall" href="#contact" class="btn btn-plain">Gọi để được tư vấn ↗</a></div>
+  <div class="hero-caption"><span>✓ Thông tin sản phẩm minh bạch</span><span>✓ Đặt hàng nhanh chóng</span></div>
+</div><div class="hero-visual" id="heroVisual"><div class="hero-graphic"><span class="sun">☀</span><span class="plant">🌿</span><span class="soil">ĐỒNG HÀNH CÙNG MÙA VỤ</span></div><div class="hero-sticker">Vì một<br><b>mùa vàng</b><span>✴</span></div></div></div></section>
+<div class="feature-band"><div class="shell feature-row"><div>◈ <span>Thông tin rõ ràng</span></div><div>✺ <span>Hỗ trợ tận tâm</span></div><div>✧ <span>Đặt hàng dễ dàng</span></div><div>❋ <span>Phù hợp nhà nông</span></div></div></div>
+<section class="section catalog shell" id="catalog">
+ <div class="section-heading"><div><span class="eyebrow dark">DANH MỤC SẢN PHẨM</span><h2>Chọn đúng sản phẩm<br><em>cho mùa vụ của bạn</em></h2></div><p>Tìm theo tên, hoạt chất hoặc nhóm vật tư. Thông tin sản phẩm do cửa hàng cung cấp.</p></div>
+ <div class="filters"><label class="search-box"><span>⌕</span><input id="search" type="search" autocomplete="off" placeholder="Tìm tên sản phẩm, hoạt chất, thương hiệu..." aria-label="Tìm kiếm sản phẩm"></label><select id="sort" aria-label="Sắp xếp sản phẩm"><option value="featured">Nổi bật</option><option value="priceAsc">Giá thấp trước</option><option value="priceDesc">Giá cao trước</option><option value="name">Theo tên A–Z</option></select></div>
+ <div id="categories" class="category-tabs" aria-label="Lọc nhóm sản phẩm"></div>
+ <div class="catalog-meta"><strong id="resultCount">Danh sách sản phẩm</strong><span id="filterStatus"></span></div>
+ <div id="products" class="product-grid"></div><div id="empty" class="empty-panel" hidden><span>🌱</span><h3>Chưa có sản phẩm phù hợp</h3><p id="emptyText">Cửa hàng đang cập nhật danh sách hàng hóa.</p></div>
+</section>
+<section id="about" class="about-section"><div class="shell about-grid"><div class="about-art"><div>✺</div><strong>Cùng bạn<br>chăm từng mùa vụ</strong></div><div><span class="eyebrow dark">VỀ CỬA HÀNG</span><h2 id="aboutTitle">Tận tâm với<br>từng mảnh vườn</h2><p id="aboutText">Chúng tôi mong muốn giúp việc lựa chọn và đặt mua vật tư nông nghiệp trở nên đơn giản, rõ ràng và thuận tiện hơn.</p><a href="#contact" class="text-link">Kết nối với cửa hàng ↗</a></div></div></section>
+<section id="contact" class="section shell"><div class="contact-grid"><div><span class="eyebrow dark">KẾT NỐI</span><h2>Cần hỗ trợ?<br><em>Chúng tôi luôn lắng nghe.</em></h2><p>Gọi điện hoặc để lại thông tin để cửa hàng liên hệ tư vấn sản phẩm và đặt hàng.</p><div class="contact-details" id="contactDetails"></div></div>
+<form id="contactForm" class="contact-form"><h3>Gửi yêu cầu tư vấn</h3><label>Họ và tên<input name="name" autocomplete="name" required maxlength="80"></label><label>Số điện thoại<input name="phone" type="tel" autocomplete="tel" required placeholder="09..." maxlength="20"></label><label>Nội dung<textarea name="question" rows="3" required maxlength="1200" placeholder="Bạn muốn được tư vấn sản phẩm nào?"></textarea></label><label class="check"><input name="consent" type="checkbox" required> Tôi đồng ý cung cấp thông tin để cửa hàng liên hệ tư vấn.</label><div id="contactCaptcha"></div><button class="btn btn-primary" type="submit">Gửi yêu cầu →</button><p id="contactStatus" class="form-status" role="status"></p></form>
+</div></section>
+</main>
+<footer class="footer"><div class="shell footer-grid"><div><div class="footer-title" id="footerName">VẬT TƯ NÔNG NGHIỆP</div><p id="footerNote">Vun bồi mùa vụ, lan tỏa giá trị xanh.</p></div><div><h4>Chính sách</h4><button data-policy="shippingPolicy">Giao hàng</button><button data-policy="returnPolicy">Đổi trả</button><button data-policy="privacyPolicy">Quyền riêng tư</button><button data-policy="terms">Điều khoản</button></div><div><h4>Thông tin liên hệ</h4><p id="footerContact">Đang cập nhật</p><a href="/admin">Quản trị cửa hàng ↗</a></div></div><div class="shell copyright">© <span id="year"></span> <span id="footerCopyright">Cửa hàng vật tư nông nghiệp</span>. Thông tin thuốc BVTV phải tuân theo nhãn và quy định hiện hành.</div></footer>
+<div id="shade" class="shade" hidden></div><aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden><div class="drawer-head"><h2 id="drawerTitle">Giỏ hàng của bạn</h2><button id="cartClose" class="icon-button" aria-label="Đóng giỏ hàng">✕</button></div><div id="cartItems" class="drawer-body"></div><div class="drawer-bottom"><div class="cart-total"><span>Tạm tính (chưa gồm phí giao)</span><strong id="cartTotal">0 ₫</strong></div><button id="checkoutOpen" class="btn btn-primary full">Tiến hành đặt hàng →</button></div></aside>
+<dialog id="checkoutDialog" class="modal"><button type="button" id="checkoutClose" class="modal-close" aria-label="Đóng">✕</button><h2>Thông tin đặt hàng</h2><p class="muted">Cửa hàng sẽ liên hệ xác nhận hàng và phí giao trước khi xử lý.</p><form id="checkoutForm"><label>Họ tên người nhận<input name="customerName" required minlength="2" maxlength="80" autocomplete="name"></label><label>Số điện thoại<input name="phone" type="tel" required maxlength="20" autocomplete="tel"></label><label>Tỉnh / thành phố<input name="region" maxlength="150" required></label><label>Địa chỉ nhận hàng<input name="address" maxlength="300" required></label><label>Ghi chú thêm<textarea name="notes" rows="2" maxlength="700"></textarea></label><label class="check"><input type="checkbox" name="consent" required> Tôi đồng ý cung cấp dữ liệu để xử lý đơn hàng theo <a href="#" id="privacyOpen">chính sách riêng tư</a>.</label><div id="checkoutCaptcha"></div><div class="cart-total"><span>Tiền hàng</span><strong id="checkoutTotal"></strong></div><button type="submit" class="btn btn-primary full">Gửi đơn đặt hàng →</button><p id="checkoutStatus" class="form-status" role="status"></p></form></dialog>
+<dialog id="infoDialog" class="modal info-modal"><button type="button" class="modal-close" id="infoClose" aria-label="Đóng">✕</button><div id="infoContent"></div></dialog>
+</body></html>
